@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body,
+        h1,
+        p,
+        button,
+        nav,
+        section {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            width: 1100px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            padding: 50px 20px 20px 40px;
+            /*top right left bottom*/
+            font-size: 40px;
+            color: white;
+        }
+
+
+
+        nav {
+            height: 65px;
+
+            text-align: center;
+            /* Center inline and inline-block elements*/
+            font-size: 13px;
+        }
+
+        .nav-elements {
+            margin: 0 10px;
+            line-height: 65px;
+            /* to have a fix height specifying a fixed height for each line*/
+        }
+
+        .left-group {
+            float: left;
+            margin-left: 20px;
+        }
+
+        #logo img {
+            width: 70px;
+            vertical-align: middle;
+        }
+
+        .center-group {
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .right-group {
+            float: right;
+            margin-right: 50px;
+        }
+
+        .nav-elements a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #info {
+            background-color: #243258;
+            text-align: center;
+            height: 290px;
+        }
+
+        #info p {
+            color: white;
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        button {
+            background-color: #449739;
+            border: none;
+            color: white;
+            text-align: center;
+        }
+
+        #change-colour {
+            color: white;
+            text-align: center;
+            display: inline-flex;
+            padding: 8px 16px;
+            /* Adjust as per preference */
+            line-height: normal;
+            /* Reset the line-height */
+            vertical-align: middle;
+            /* Align it vertically */
+        }
+
+        #demo {
+            font-size: 13px;
+            font-weight: bold;
+            margin: 27px 0px;
+            color: white;
+            text-align: center;
+            padding: 15px 27px;
+            vertical-align: middle;
+            /* Align it vertically */
+        }
+
+        .showcase {
+            padding: 45px 0px;
+            height: 300px;
+            text-align: center;
+        }
+
+        .hobbies:first-child {
+            margin-left: 5px;
+        }
+
+        .hobbies:last-child {
+            margin-right: 5px;
+        }
+
+        .hobbies {
+            display: inline-block;
+            margin-left: 40px;
+
+            margin-right: 40px;
+
+        }
+
+        .hobbies img {
+            width: 190px;
+            height: 140px;
+        }
+
+        .showcase p {
+            font-size: 13px;
+            margin-bottom: 5px;
+
+        }
+
+        .showcase .number {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="left-group">
+            <span class="nav-elements" id="logo">
+                <img src="./images/poppy.webp">
+            </span>
+        </div>
+
+        <div class="center-group">
+            <span class="nav-elements">
+                <a href="https://futurearchitectureplatform.org/" target="_blank">Platform</a>
+            </span>
+            <span class="nav-elements">
+                <a href="https://architecturalhouseplans.com/" target="_blank">Plans</a>
+            </span>
+            <span class="nav-elements">
+                <a href="https://www.cio.com/article/222421/what-is-enterprise-architecture-a-framework-for-transformation.html"
+                    target="_blank">Entreprise</a>
+            </span>
+            <span class="nav-elements">
+                <a href="https://www.archdaily.com/792253/18-useful-research-resources-for-architects-online"
+                    target="_blank">Resources</a>
+            </span>
+            <span class="nav-elements">
+                <a href="https://www.mcgill.ca/study/2023-2024/faculties/engineering/undergraduate/programs/bachelor-science-bsc-architecture-architecture"
+                    target="_blank">Education</a></span>
+        </div>
+
+        <div class="right-group">
+            <span class="nav-elements"> <a href="https://raic.org/contact" target="_blank">Contact Us</a></span>
+            <span class="nav-elements"><a href="https://architectureprize.com/submit/login.php" target="_blank">Log
+                    In</a></span>
+            <button class="nav-elements" id="change-colour" onclick="changeBgColour();">Change Colour</button>
+        </div>
+    </nav>
+    <section id="info">
+        <h1><b>See value from social sooner</b> </h1>
+        <p> Our training and strategic services have helped<br> thousands of organizations
+            succeed
+            on social.</p>
+        <button id="demo"
+            onclick="window.open('https://mobirise.com/extensions/architectamp/architect-design-demo.html')">Request a
+            Demo</button>
+    </section>
+
+    <section class="showcase">
+        <span class="hobbies" id="lotus">
+            <img src="./images/right.png" alt="I like flowers" id="left-img">
+            <p class="number">2,500</p>
+            <br>
+            <p>enterprise organizations successfully lauched</p>
+        </span>
+        <span class="hobbies" id="study">
+            <img src="./images/center.png" alt="I like to study" id="center-img">
+            <p class="number">45,000</p>
+            <br>
+            <p>enterprise users onboarded seamlessly</p>
+        </span>
+        <span class="hobbies" id="painting">
+            <img src="./images/left.png" alt="I like to paint" id="right-img">
+            <p class="number">200,000+</p>
+            <br>
+            <p>professionals trained on product and strategy</p>
+        </span>
+
+    </section>
+
+    <!--SCRIPT-->
+    <!--Where should I put JS script in HTML? The best practice is to put JavaScript "script" tags just
+         before the closing body tag rather than in the <head> section of your HTML. The reason for 
+            this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body.-->
+
+    <script>
+        const info = document.getElementById("info");
+        const leftImg = document.getElementById("left-img");
+        const centerImg = document.getElementById("center-img");
+        const rightImg = document.getElementById("right-img");
+        let originalColour = window.getComputedStyle(info).backgroundColor;
+        let isChanged = false;
+
+        function changeBgColour() {
+            if (isChanged) {
+                info.style.backgroundColor = originalColour;
+                leftImg.src = "images/left.png";
+                centerImg.src = "images/center.png";
+                rightImg.src = "images/right.png";
+                isChanged = false;
+            } else {
+                isChanged = true;
+                leftImg.src = "images/lotus.jpg";
+                centerImg.src = "images/study.JPG";
+                rightImg.src = "images/painting.jpg";
+                info.style.backgroundColor = "#f58e28";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
